@@ -11,6 +11,7 @@ grade: all
 	./scripts/grade.sh
 
 $(BIN_DIR)/semaphore_lab: src/semaphore_lab.c include/semaphore_lab.h
+	mkdir -p $(BIN_DIR)
 	$(CC) $(CFLAGS) -pthread $< -o $@
 
 clean:
